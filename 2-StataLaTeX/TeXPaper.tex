@@ -1,0 +1,42 @@
+\documentclass[11pt]{article} % use larger type; default would be 10pt
+\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+\usepackage{pslatex}
+\usepackage{standalone} %required by outreg2 in Stata
+\usepackage{dcolumn} %required by stargazer in R
+
+\title{Your Paper That's So Transparent And Reproducible You'll Get a Tenure Track Position}
+\author{Garret Christensen}
+%\date{} % Activate to display a given date or no date (if empty),
+         % otherwise the current date is printed 
+
+\begin{document}
+\input{./StataScalarList.tex}
+%Just load the file full of scalars at the beginning
+%Call them later when you need them
+\maketitle
+
+\section{Wait for it}
+
+This is where I introduce you to my amazingness.
+I'm going to do a little thing where I include numerical output from Stata.
+
+The mean of the price variable is $\meanprice$ and its standard deviation (rounded to one decimal point) is $\stddevprice$
+
+\subsection{Wait for it.}
+
+More text, and ... a table! 
+
+\begin{table}
+\caption{Made Automatically in Stata}
+\input{outputS.tex} %created by StataLaTeX.do
+\end{table}
+%input the table you generated in Stata with outreg2 or estout
+%This is a relatively simple 2-click workflow
+%One click in Stata to run all your code and generate the results
+%and a second click to compile and include those results into your paper.
+
+%The concern is that with a lot of tables, you can forget which script file generated which table. Hence the comment above next to the input statement.
+
+
+
+\end{document}
