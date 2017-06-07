@@ -1,0 +1,30 @@
+{smcl}
+{com}{sf}{ul off}{txt}
+{com}. 
+. //OFF
+. summ price
+
+{txt}    Variable {c |}       Obs        Mean    Std. Dev.       Min        Max
+{hline 13}{c +}{hline 56}
+{space 7}price {c |}{res}        74    6165.257    2949.496       3291      15906
+{txt}
+{com}. //ON
+. txt "The mean of Price variable is " %9.2f r(mean) " and SD is " %9.2f r(sd)
+
+
+{txt}> The mean of Price variable is 6165.26 and SD is 2949.50
+{com}. 
+. /***
+> LaTeX is great for equations. $a^2+b^2=c^2$
+> $$Y_i=\alpha+\beta_1 \cdot X_i+\epsilon_i$$
+> ***/
+. 
+. markdoc example, replace export(docx)
+{txt}c:\ado\plus/m/markdoc_simple.docx
+{p}(MarkDoc created {bf:{browse "example.docx"}})
+
+
+{com}. 
+{txt}end of do-file
+
+{com}. exit, clear
