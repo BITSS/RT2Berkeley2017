@@ -16,7 +16,7 @@ library(foreign)
 library(stargazer)
 #install.packages("sandwich")
 library(sandwich)
-
+library(readr)
 ```
 
 Which is why you can turn off code (with echo=FALSE) and/or results (with results='hide'). You're not going to see anything from this chunk here: 
@@ -42,7 +42,7 @@ Loading the data
 You can bring in the Stata data directly with the 'foreign' package. However, as far as I know, this package only works through Stata version 12 data. I might be wrong on that.
 
 ```{r, echo = FALSE, warning=FALSE }
-WASHB<-read.dta("WASHBpublic_mock.dta")
+WASHB<-read_csv("WASHBpublic_mock.csv")
 ```
 
 Running Analysis

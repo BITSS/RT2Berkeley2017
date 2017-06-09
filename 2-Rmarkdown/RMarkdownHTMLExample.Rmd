@@ -24,6 +24,9 @@ library(foreign)
 library(stargazer)
 #install.packages("sandwich")
 library(sandwich)
+#install.packages("readr")
+library(readr)
+
 #setwd ("C:/Users/garret/Box Sync/CEGA-Programs-BITSS/1_Events/3_Workshops-Seminars\UCMerced\UCMerced2017\3-Rmarkdown")
 #R is cool with relative paths, so you shouldn't even need to do this.
 ```
@@ -51,7 +54,7 @@ Loading the data
 You can bring in the Stata data directly with the 'foreign' package.
 
 ```{r, echo = FALSE }
-WASHB<-read.dta("WASHBpublic_mock.dta")
+WASHB<-read_csv("WASHBpublic_mock.csv")
 ```
 
 Running Analysis
